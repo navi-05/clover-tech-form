@@ -111,7 +111,7 @@ const FormCmp = () => {
     }
   }
 
-  if (!isFormSubmitted) return <Cta />;
+  if (isFormSubmitted) return <Cta />;
 
   return (
     <div className="w-full flex flex-col justify-center bg-white shadow-xl my-20 sm:mx-auto p-4 md:p-8 sm:max-w-lg md:max-w-3xl  rounded-lg ">
