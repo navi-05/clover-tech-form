@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 // next.config.js
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: "media.giphy.com"
+      }
+    ]
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback.fs = false;
@@ -13,7 +21,7 @@ const nextConfig = {
   },
   env: {
     GOOGLE_SERVICE_PRIVATE_KEY: process.env.GOOGLE_SERVICE_PRIVATE_KEY
-  }
+  },
 };
 
 module.exports = nextConfig

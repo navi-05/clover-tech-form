@@ -1,8 +1,8 @@
 "use client"
-import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
+import Pride from "react-canvas-confetti/dist/presets/pride";
 
 const Confetti = () => {
-  return <Fireworks autorun={{ speed: 3 }} />;
+  return <Pride autorun={{ speed: 30, duration: 4000 }} />;
 }
 
 export default Confetti
